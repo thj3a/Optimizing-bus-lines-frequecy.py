@@ -38,8 +38,9 @@ class BruteForce:
             l = r[0]
             f = r[1]
             t = r[2]
-            if f > 0:
-                c += self.data.costs[l,f][t]
+            c += self.data.costs[l,f][t]
+            if t == 'GAS NATURAL' and f == 1 and l == 'Linha 1':
+                print(f'CUSTO: {self.data.costs[l,f][t]}')
         return c
 
 
